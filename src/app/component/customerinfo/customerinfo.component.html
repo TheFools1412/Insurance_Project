@@ -1,0 +1,70 @@
+<h1 style="text-align: center; color: rgb(61, 7, 207);">Info Customer </h1>
+<ng-container *ngIf="customer != null">
+    <div class="row bg-white">
+        <div class="row form-group ml-2">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class="form-label">Name Customer</label>
+                    <input type="text" class="form-control col-sm-10 mr-10" [(ngModel)]="nameCustomer"
+                        style="margin-left: 35px;" placeholder="Enter Name Customer, please">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class="form-label">Birthday</label>
+                    <input type="date" class="form-control col-sm-10 mr-10" [(ngModel)]="birthday"
+                        style="margin-left: 35px;" placeholder="Enter Birthday Customer,please ">
+                </div>
+            </div>
+        </div>
+        <div class="row form-group ml-2">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class=" form-label">Address</label>
+                    <input type="text" class="form-control col-sm-10 mr-10" [(ngModel)]="adress"
+                        style="margin-left: 35px;" placeholder="Enter Address Customer,please">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-control col-sm-10 mr-10" [(ngModel)]="phone"
+                        style="margin-left: 35px;" placeholder="Enter Phone Customer,please">
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group ml-2">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class=" form-label">Email</label>
+                    <input type="text" class="form-control col-sm-10 mr-10" [(ngModel)]="email"
+                        style="margin-left: 35px;" placeholder="Enter Email Customer,please">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control col-sm-10 mr-10" [(ngModel)]="username"
+                        style="margin-left: 35px;" placeholder="Enter Phone Customer,please">
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group ml-2">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class=" form-label">Created</label>
+                    <input type="date" class="form-control col-sm-10 mr-10" [(ngModel)]="birthday"
+                        style="margin-left: 35px;" placeholder="Enter Created Customer,please ">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label class="form-label">Photo</label>
+                    <img src="{{profilePhoto}}" width="70" height="50" style="margin-left: 35px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

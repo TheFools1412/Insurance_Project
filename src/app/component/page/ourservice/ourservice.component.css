@@ -1,0 +1,35 @@
+.imgcrop{
+    width: 50px;
+    height: 200px;
+   
+}
+.body{
+    background-color: red;
+}
+.image{
+    width: 100px;
+    height: 100px;
+    
+    margin-bottom: 10px;
+}
+.boxcenter{
+    color: #202831; 
+    width: 70%;
+    margin: 0 auto;
+
+}
+.danhmucmuahang img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-body p{
+    margin-top: 10px;
+    margin-top: 30px;
+    display:  inline-block;
+    justify-content: space-between;
+    text-align: justify;
+}
+h1{
+    color: #074487;
+}

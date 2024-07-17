@@ -1,0 +1,67 @@
+<h2> Insurance</h2>
+
+<div id="myModal" class="modal fade " role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <h3>{{tieude}}</h3>
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" (click)="dong()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <add-update-insurance [insurance]="insurance" *ngIf="dangThemSua"></add-update-insurance>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<table class="table  table-hover  ">
+    <thead class="table text-white " style="background-color: rgb(36, 35, 70);">
+        <tr class="container  ">
+            <th scope="col">Id Insurance</th>
+            <th scope="col">Name </th>
+            <th scope="col">optiondate </th>
+            <th scope="col">dateStart </th>
+            <th scope="col">dateEnd </th>
+            <th scope="col">price </th>
+            <!-- <th scope="col">idCustomer </th> -->
+            <th scope="col">typeInsurance </th>
+            <th scope="col">note </th>
+
+            <th scope="col" class="text-center mt-0">Tuy Chon</th>
+        </tr>
+    </thead>
+    <tbody class="alert   alert-white">
+        <ng-container *ngIf="result != null">
+            <tr *ngFor="let insurance of result">
+                <td scope="row">{{insurance.idInsurance}}</td>
+                <td>{{insurance.name}}</td>
+                <td>{{insurance.optiondate}}</td>
+                <td>{{insurance.dateStart}}</td>
+                <td>{{insurance.dateEnd}}</td>
+                <td>{{insurance.price}}</td>
+                <!-- <td>{{insurance.idCustomer}}</td> -->
+                <td>{{insurance.typeInsurance}}</td>
+                <td>{{insurance.note}}</td>
+                <td>
+                    <button type="button" class="btn text-white mr-1" (click)="updateinsurance(insurance)"
+                        data-toggle="modal" data-target="#myModal" style="background-color: rgb(31, 24, 232);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fill-rule="evenodd"
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                        </svg> Cap nhat
+                    </button>
+
+
+
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

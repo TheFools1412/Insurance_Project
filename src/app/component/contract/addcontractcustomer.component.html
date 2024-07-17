@@ -1,0 +1,61 @@
+<a [routerLink]="['/welcome/contractcustomer']">Back</a>
+
+<h3>Add Contract Customer</h3>
+
+<form [formGroup]="addContractForm" (ngSubmit)="save()" class="was-validated">
+    <table class="table table-striped table-hover .container border-start">
+        <tr>
+            <td>Contract Number</td>
+            <td><input type="text" formControlName="contractNumber" [(ngModel)]="contractNumber" class="form-control" placeholder="Enter Contract Number ,please "
+                    required></td>
+            <div *ngIf="addContractForm.get('contractNumber').touched">
+                <span *ngIf="addContractForm.hasError('required',['contractNumber'])" class="error">
+                    Contract Number not null !!
+                </span>
+            </div>
+        </tr>
+        <tr>
+            <td>Date Start</td>
+            <td><input type="date" formControlName="dateStart" [(ngModel)]="dateStart" class="form-control" ></td>
+            <div *ngIf="addContractForm.get('dateStart').touched">
+                <span *ngIf="addContractForm.hasError('required',['dateStart'])" class="error">
+                   Date Start not null !!
+                </span>
+            </div>
+        </tr>
+        <tr>
+            <td>Date End</td>
+            <td><input type="date" formControlName="dateEnd"  [(ngModel)]="dateEnd" class="form-control"></td>
+            <div *ngIf="addContractForm.get('dateEnd').touched">
+                <span *ngIf="addContractForm.hasError('required',['dateEnd'])" class="error">
+                   Date End not null !!
+                </span>
+            </div>
+        </tr>
+        <tr>
+            <td>Id Customer</td>
+            <td><input type="text" formControlName="idCustomer" [(ngModel)]="this.idCustomer" class="form-control" ></td>
+        </tr>
+        <tr>
+            <td>Id TypeInsurace</td>
+            <td><input type="text" formControlName="idTypeInsurance"  [(ngModel)]="idTypeInsurance" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Amount Insurance </td>
+            <td><input type="text" formControlName="amountInsurance" [(ngModel)]="amountInsurance" class="form-control" ></td>
+        </tr>
+        <tr>
+            <td>Premium</td>
+            <td><input type="text" formControlName="premium"  [(ngModel)]="premium" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Note </td>
+            <td><input type="text" formControlName="note" [(ngModel)]="note" class="form-control"></td>
+        </tr>
+
+
+    </table>
+    <div class="d-grid gap-3">
+        <input type="submit" value="Save" class="btn btn-outline-secondary" [disabled]="addContractForm.invalid">
+    </div>
+</form>

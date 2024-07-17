@@ -1,0 +1,79 @@
+<h2 class="bg-white"> Detail Contract Customer</h2>
+
+
+<a [routerLink]="['/welcome/contractcustomer' ,{idCustomer : this.idCustomer}]" class="btn btn-outline-success">Back</a>
+
+
+
+<table class=" table align-middle mb-0 bg-white table-hover border-1  ">
+
+    <ng-container *ngIf="result != null">
+        <tr *ngFor="let contract of result">
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Id Contract </label>
+                <div class="col-sm-7">
+                    <td>{{contract.id}}</td>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Number Contract </label>
+                <div class="col-sm-7">
+                    <td>{{contract.contractNumber}}</td>
+                </div>
+
+            </div>
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> DateStart Contract </label>
+                <div class="col-sm-7">
+                    <td>{{contract.dateStart}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> DateEnd Contract </label>
+                <div class="col-sm-7">
+                    <td>{{contract.dateEnd}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Id Customer</label>
+                <div class="col-sm-7">
+                    <td>{{contract.idCustomer}}</td>
+                </div>
+            </div>
+
+            
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Id TypeInsurance</label>
+                <div class="col-sm-7">
+                    <td>{{contract.idTypeInsurance}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> AmountInsurance Customer</label>
+                <div class="col-sm-7">
+                    <td>{{contract.amountInsurance}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Premium Customer</label>
+                <div class="col-sm-7">
+                    <td>{{contract.premium}}</td>
+                </div>
+            </div>
+            <br><br>
+            <a [routerLink]="['/welcome/paymentcontractcustomer' ,{id : contract.id}]" class="btn btn-outline-success">Payment</a>
+
+        </tr>
+    </ng-container>
+
+   
+</table>
+<br>

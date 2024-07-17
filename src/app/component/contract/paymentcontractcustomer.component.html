@@ -1,0 +1,72 @@
+<h2 class="bg-white"> Payment Contract Customer</h2>
+
+<table class=" table align-middle mb-0 bg-white table-hover border-1  ">
+
+    <ng-container *ngIf="result != null">
+        <tr *ngFor="let payment of result">
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Id Contract </label>
+                <div class="col-sm-7">
+                    <td>{{payment.idContract}}</td>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Id Customer </label>
+                <div class="col-sm-7">
+                    <td>{{payment.idCustomer}}</td>
+                </div>
+
+            </div>
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Name Customer </label>
+                <div class="col-sm-7">
+                    <td>{{payment.nameCustomer}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Date Payment Contract </label>
+                <div class="col-sm-7">
+                    <td>{{payment.datePayment}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Type Payment</label>
+                <div class="col-sm-7">
+                    <td>{{payment.typePayment}}</td>
+                </div>
+            </div>
+
+            
+
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Amount Payment</label>
+                <div class="col-sm-7">
+                    <td>{{payment.amountPayment}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Description </label>
+                <div class="col-sm-7">
+                    <td>{{payment.description}}</td>
+                </div>
+
+            </div>
+            <div class="row form-group">
+                <label class="col-sm-5 text-left"> Status Payment</label>
+                <div class="col-sm-7">
+                    <td>{{payment.statusPayment}}</td>
+                </div>
+            </div>
+            <br><br>
+
+        </tr>
+    </ng-container>
+
+   
+</table>
